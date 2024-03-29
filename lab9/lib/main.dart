@@ -55,8 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void _makeEspresso() {
     setState(() {
       final snackBar = SnackBar(
-        content: Text(coffeeMachine.makingCoffee()),
-        duration: const Duration(seconds: 1)
+          content: Text(coffeeMachine.makingCoffee()),
+          duration: const Duration(seconds: 1)
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     });
@@ -86,9 +86,9 @@ class _MyHomePageState extends State<MyHomePage> {
             Text('Вода: ${coffeeMachine.water}мл'),
             Text('Деньги: ${coffeeMachine.cash}руб'),
             Container(
-              alignment: Alignment.center,
-              padding: const EdgeInsets.only(top: 20.0, bottom: 10.0),
-              child: const Text('Добавить 50 единиц ресурса:', style: TextStyle(fontSize: 16,))
+                alignment: Alignment.center,
+                padding: const EdgeInsets.only(top: 20.0, bottom: 10.0),
+                child: const Text('Добавить 50 единиц ресурса:', style: TextStyle(fontSize: 16,))
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () => _addResource('water'),
-                  child: const Text('Вода'),
+                    child: const Text('Вода'),
                   ),
                 ),
               ],
